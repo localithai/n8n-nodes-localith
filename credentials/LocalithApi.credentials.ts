@@ -8,6 +8,7 @@ import {
 export class LocalithApi implements ICredentialType {
   name = 'localithApi';
   displayName = 'Localith API';
+  icon = 'file:../nodes/Localith/localith.svg' as const;
   documentationUrl = 'https://embedsocial.com/app/api/documentation';
   properties: INodeProperties[] = [
     {
