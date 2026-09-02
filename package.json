@@ -62,6 +62,7 @@
     "@types/node": "^22.0.0",
     "n8n-workflow": "^2.11.0",
     "prettier": "^3.0.0",
+    "release-it": "^20.2.1",
     "typescript": "^5.0.0"
   },
   "peerDependencies": {
