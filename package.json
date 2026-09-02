@@ -1,29 +1,27 @@
 {
   "name": "n8n-nodes-localith",
-  "version": "0.1.17",
- 
-"description": "n8n community node for Localith — access your Google Business reviews, listings, and location metrics. Build automations, dashboards, or your own reputation management platform.",
-"keywords": [
-  "n8n-community-node-package",
-  "n8n",
-  "localith",
-  "google business profile",
-  "google business api",
-  "gbp",
-  "reviews",
-  "google reviews",
-  "reputation management",
-  "listings",
-  "location management",
-  "review automation",
-  "multi-location",
-  "local seo",
-  "embedsocial",
-  "social proof"
-  
-],
+  "version": "0.1.18",
+  "description": "n8n community node for Localith — access your Google Business reviews, listings, and location metrics. Build automations, dashboards, or your own reputation management platform.",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "localith",
+    "google business profile",
+    "google business api",
+    "gbp",
+    "reviews",
+    "google reviews",
+    "reputation management",
+    "listings",
+    "location management",
+    "review automation",
+    "multi-location",
+    "local seo",
+    "embedsocial",
+    "social proof"
+  ],
   "license": "MIT",
-  "homepage": "https://github.com/localithai/n8n-nodes-localith",
+  "homepage": "https://localith.ai",
   "author": {
     "name": "Localith",
     "email": "support@localith.ai"
@@ -40,9 +38,10 @@
     "build": "tsc -p tsconfig.json && cp nodes/Localith/localith.svg dist/nodes/Localith/localith.svg",
     "dev": "n8n-node dev",
     "format": "prettier nodes credentials --write",
-    "lint": "eslint nodes credentials --ext .ts",
-    "lint:fix": "eslint nodes credentials --ext .ts --fix",
-    "prepublishOnly": "npm run build "
+    "lint": "n8n-node lint",
+    "lint:fix": "n8n-node lint --fix",
+    "prepublishOnly": "npm run build ",
+    "release": "n8n-node release"
   },
   "files": [
     "dist"
@@ -55,13 +54,12 @@
     "nodes": [
       "dist/nodes/Localith/Localith.node.js"
     ],
-  "iconUrl": "file:dist/nodes/Localith/localith.svg"},
+    "iconUrl": "file:dist/nodes/Localith/localith.svg"
+  },
   "devDependencies": {
-    "@eslint/js": "^10.0.1",
     "@n8n/eslint-plugin-community-nodes": "*",
-    "@n8n/node-cli": "*",
+    "@n8n/node-cli": "^0.46.2",
     "@types/node": "^22.0.0",
-    "eslint": "^10.0.2",
     "n8n-workflow": "^2.11.0",
     "prettier": "^3.0.0",
     "typescript": "^5.0.0"
